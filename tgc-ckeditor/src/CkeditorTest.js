@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import parse from "html-react-parser"
 
 export default class CkeditorTest extends Component {
     state = {
@@ -36,7 +37,7 @@ export default class CkeditorTest extends Component {
                 </div>
                 <div>
                     <h1>Output</h1>
-                    {this.state.data}
+                    {parse(this.state.data)}
                 </div>
             </React.Fragment>
 
